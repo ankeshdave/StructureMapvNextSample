@@ -15,12 +15,15 @@
         "Microsoft.Framework.Logging": "1.0.0-beta4",
         "Microsoft.Framework.Logging.Console": "1.0.0-beta4",
         "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta4",
-        "structuremap": "3.1.5.154"
+        "structuremap": "3.1.5.154",
+        "Kestrel": "1.0.0-beta4",
+        "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta4"
     },
 
     "commands": {
         "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
-        "gen": "Microsoft.Framework.CodeGeneration"
+        "gen": "Microsoft.Framework.CodeGeneration",
+        "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5004"           
     },
 
     "frameworks": {
@@ -38,9 +41,10 @@
         "**.xproj",
         "**.user",
         "**.vspscc"
-    ],
+    ],    
     "scripts": {
         "postrestore": [ "npm install", "bower install" ],
         "prepare": [ "gulp copy" ]
     }
+
 }

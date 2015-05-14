@@ -15,7 +15,9 @@
       "Microsoft.Framework.Logging >= 1.0.0-beta4",
       "Microsoft.Framework.Logging.Console >= 1.0.0-beta4",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-beta4",
-      "structuremap >= 3.1.5.154"
+      "structuremap >= 3.1.5.154",
+      "Kestrel >= 1.0.0-beta4",
+      "Microsoft.AspNet.Server.Kestrel >= 1.0.0-beta4"
     ],
     "DNX,Version=v4.5.1": []
   },
@@ -34,10 +36,10 @@
         }
       },
       "files": [
-        "caution.png",
         "EntityFramework.7.0.0-beta4.nupkg",
         "EntityFramework.7.0.0-beta4.nupkg.sha512",
         "EntityFramework.nuspec",
+        "caution.png",
         "readme.html",
         "yes.png",
         "content/deleteme",
@@ -309,12 +311,45 @@
         "Ix-Async.1.2.3.nupkg",
         "Ix-Async.1.2.3.nupkg.sha512",
         "Ix-Async.nuspec",
-        "lib/net40/System.Interactive.Async.dll",
         "lib/net40/System.Interactive.Async.XML",
-        "lib/net45/System.Interactive.Async.dll",
+        "lib/net40/System.Interactive.Async.dll",
         "lib/net45/System.Interactive.Async.XML",
-        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/System.Interactive.Async.dll",
-        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/System.Interactive.Async.XML"
+        "lib/net45/System.Interactive.Async.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/System.Interactive.Async.XML",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/System.Interactive.Async.dll"
+      ]
+    },
+    "Kestrel/1.0.0-beta4": {
+      "serviceable": false,
+      "sha": "8f2aCgtDh5ONWS7K2EYy23s3nnPvZS7rPimYHJ1DAvF7HG5GSmSC+SkKx6ZtBOjhU9agneWjDwj5jGjdPWfjsA==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Microsoft.AspNet.Hosting": "1.0.0-beta4",
+            "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta4"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Kestrel.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Kestrel.dll"
+          ]
+        }
+      },
+      "files": [
+        "Kestrel.1.0.0-beta4.nupkg",
+        "Kestrel.1.0.0-beta4.nupkg.sha512",
+        "Kestrel.nuspec",
+        "lib/dnx451/Kestrel.dll",
+        "lib/dnx451/Kestrel.xml",
+        "lib/dnxcore50/Kestrel.dll",
+        "lib/dnxcore50/Kestrel.xml"
       ]
     },
     "Microsoft.AspNet.Authentication/1.0.0-beta4": {
@@ -1405,6 +1440,41 @@
         "Microsoft.AspNet.Server.IIS.nuspec"
       ]
     },
+    "Microsoft.AspNet.Server.Kestrel/1.0.0-beta4": {
+      "serviceable": false,
+      "sha": "q1UkQB67PymuTryvL3i35vyZAt6ZToQdS+3rYlgqmpDMg4JdduhhtdvWj6H3R6TlBaOnF8zJn2TvlQlzQEkfzw==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Microsoft.Framework.Runtime.Interfaces": "1.0.0-beta4"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Microsoft.AspNet.Server.Kestrel.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Microsoft.AspNet.Server.Kestrel.dll"
+          ]
+        }
+      },
+      "files": [
+        "Microsoft.AspNet.Server.Kestrel.1.0.0-beta4.nupkg",
+        "Microsoft.AspNet.Server.Kestrel.1.0.0-beta4.nupkg.sha512",
+        "Microsoft.AspNet.Server.Kestrel.nuspec",
+        "lib/dnx451/Microsoft.AspNet.Server.Kestrel.dll",
+        "lib/dnx451/Microsoft.AspNet.Server.Kestrel.xml",
+        "lib/dnxcore50/Microsoft.AspNet.Server.Kestrel.dll",
+        "lib/dnxcore50/Microsoft.AspNet.Server.Kestrel.xml",
+        "native/darwin/universal/libuv.dylib",
+        "native/windows/amd64/libuv.dll",
+        "native/windows/x86/libuv.dll"
+      ]
+    },
     "Microsoft.AspNet.Server.WebListener/1.0.0-beta4": {
       "serviceable": true,
       "sha": "7i7WcLxrwlrrATJKipf7TXQxLpndK2RvBVG/PpnLRBEKG5Vlm9L4eMNG2OHLmmcNH+IONKZrPwYMeBaxXfql/Q==",
@@ -1548,7 +1618,7 @@
     },
     "Microsoft.CodeAnalysis.Analyzers/1.0.0-rc2": {
       "serviceable": false,
-      "sha": "/4Z5es8TXCEn5sfzWz2uhUITmikgCfMAhehMJPQcSD2FRp2ooLTczDq3p4KOl+bcnsvaAu0aKrmdRgOvkrcwhw==",
+      "sha": "S3P/WuSCgbhIxMVDFCJiJAh9g8ZVVIISsFn2lKqJYJdRGiFM2WJR0I46psNVXJt2uM13SBSGiAKAdqOeRvhl7w==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
           "dependencies": {},
@@ -1574,7 +1644,7 @@
     },
     "Microsoft.CodeAnalysis.Common/1.0.0-rc2": {
       "serviceable": false,
-      "sha": "7ALXqeJxiEMgnSST2qlWMThc5CIhJNFsUKYITIXXXj7gf8mF+ktEuKgUE7NWePzUgi0gq/2WmBX/4yWJuF1j6w==",
+      "sha": "LIc/rzjORrM0jrQ9ZtoIwJWbYi4IM7RvcSFT9YLe2uH9aBPq2oQ7qimK3ZosZJE+5faoJ+DgfGOigWw6uQpmQw==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
           "dependencies": {
@@ -1608,7 +1678,7 @@
     },
     "Microsoft.CodeAnalysis.CSharp/1.0.0-rc2": {
       "serviceable": false,
-      "sha": "wsj0BdWRY+fsUINMEQ+uanN0pWMAMj2z0UiJKjwoUo/Xbrk7PqGklzpOB7lvlESHjO8+Eaw71PQnml6j7m7rdQ==",
+      "sha": "RdXyaAZSRJH/oU6ccy3RNgGVMwFY1fY41I0Rtpbch9nq4mePYrkjTk3YObNHYa4lowAhktlaUoQOpprmOzc/kg==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
           "dependencies": {
@@ -1807,11 +1877,11 @@
         "Microsoft.Framework.CodeGeneration.EntityFramework.1.0.0-beta4.nupkg",
         "Microsoft.Framework.CodeGeneration.EntityFramework.1.0.0-beta4.nupkg.sha512",
         "Microsoft.Framework.CodeGeneration.EntityFramework.nuspec",
+        "Templates/DbContext/NewLocalDbContext.cshtml",
         "lib/dnx451/Microsoft.Framework.CodeGeneration.EntityFramework.dll",
         "lib/dnx451/Microsoft.Framework.CodeGeneration.EntityFramework.xml",
         "lib/dnxcore50/Microsoft.Framework.CodeGeneration.EntityFramework.dll",
-        "lib/dnxcore50/Microsoft.Framework.CodeGeneration.EntityFramework.xml",
-        "Templates/DbContext/NewLocalDbContext.cshtml"
+        "lib/dnxcore50/Microsoft.Framework.CodeGeneration.EntityFramework.xml"
       ]
     },
     "Microsoft.Framework.CodeGeneration.Templating/1.0.0-beta4": {
@@ -1878,19 +1948,16 @@
         "Microsoft.Framework.CodeGenerators.Mvc.1.0.0-beta4.nupkg.sha512",
         "Microsoft.Framework.CodeGenerators.Mvc.nuspec",
         "THIRDPARTYNOTICE ASP.NET_Preview.rtf",
-        "lib/dnx451/Microsoft.Framework.CodeGenerators.Mvc.dll",
-        "lib/dnx451/Microsoft.Framework.CodeGenerators.Mvc.xml",
-        "lib/dnxcore50/Microsoft.Framework.CodeGenerators.Mvc.dll",
-        "lib/dnxcore50/Microsoft.Framework.CodeGenerators.Mvc.xml",
         "Templates/ControllerGenerator/ControllerWithContext.cshtml",
         "Templates/ControllerGenerator/EmptyController.cshtml",
         "Templates/MvcLayout/Error.cshtml",
         "Templates/MvcLayout/_Layout.cshtml",
         "Templates/Startup/ReadMe.cshtml",
         "Templates/Startup/Startup.cshtml",
+        "Templates/StaticFiles/Content/Site.css",
         "Templates/StaticFiles/Content/bootstrap.css",
         "Templates/StaticFiles/Content/bootstrap.min.css",
-        "Templates/StaticFiles/Content/Site.css",
+        "Templates/StaticFiles/Scripts/_references.js",
         "Templates/StaticFiles/Scripts/bootstrap.js",
         "Templates/StaticFiles/Scripts/bootstrap.min.js",
         "Templates/StaticFiles/Scripts/jquery-1.10.2.intellisense.js",
@@ -1905,12 +1972,15 @@
         "Templates/StaticFiles/Scripts/modernizr-2.6.2.js",
         "Templates/StaticFiles/Scripts/respond.js",
         "Templates/StaticFiles/Scripts/respond.min.js",
-        "Templates/StaticFiles/Scripts/_references.js",
         "Templates/ViewGenerator/Create.cshtml",
         "Templates/ViewGenerator/Delete.cshtml",
         "Templates/ViewGenerator/Details.cshtml",
         "Templates/ViewGenerator/Edit.cshtml",
-        "Templates/ViewGenerator/List.cshtml"
+        "Templates/ViewGenerator/List.cshtml",
+        "lib/dnx451/Microsoft.Framework.CodeGenerators.Mvc.dll",
+        "lib/dnx451/Microsoft.Framework.CodeGenerators.Mvc.xml",
+        "lib/dnxcore50/Microsoft.Framework.CodeGenerators.Mvc.dll",
+        "lib/dnxcore50/Microsoft.Framework.CodeGenerators.Mvc.xml"
       ]
     },
     "Microsoft.Framework.CommandLineUtils/1.0.0-beta4": {
@@ -2811,12 +2881,12 @@
           "dependencies": {},
           "frameworkAssemblies": [],
           "runtimeAssemblies": [
-            "lib/net40/StructureMap.dll",
-            "lib/net40/StructureMap.Net4.dll"
+            "lib/net40/StructureMap.Net4.dll",
+            "lib/net40/StructureMap.dll"
           ],
           "compileAssemblies": [
-            "lib/net40/StructureMap.dll",
-            "lib/net40/StructureMap.Net4.dll"
+            "lib/net40/StructureMap.Net4.dll",
+            "lib/net40/StructureMap.dll"
           ]
         }
       },
@@ -2824,9 +2894,9 @@
         "structuremap.3.1.5.154.nupkg",
         "structuremap.3.1.5.154.nupkg.sha512",
         "structuremap.nuspec",
-        "lib/net40/StructureMap.dll",
         "lib/net40/StructureMap.Net4.dll",
         "lib/net40/StructureMap.Net4.pdb",
+        "lib/net40/StructureMap.dll",
         "lib/net40/StructureMap.pdb",
         "lib/net40/StructureMap.xml",
         "lib/portable-win+net40/StructureMap.dll",
@@ -2860,7 +2930,7 @@
     },
     "System.IO/4.0.10-beta-22816": {
       "serviceable": false,
-      "sha": "/wVhoi2uVXw5IZFU+JrPlyVgKrtMPtzQaYQ3DKUxH9nqiX64BChTFGNDcwZK3iNWTIWESxJhj9JR3lbqbG/PIg==",
+      "sha": "PjyH9UMFVQHSl8g1XR+M6Q/mG2RTpPff42kG9aygXyR/Wyt/O/wOiyxZ2SaYNl8e86yecKRh9SnK2RS9thI4ig==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
           "dependencies": {
@@ -2919,7 +2989,7 @@
     },
     "System.Runtime/4.0.20-beta-22816": {
       "serviceable": false,
-      "sha": "sDSJEmM6Q5O7Nn9XxHTrsEJ4bv4hsBdeTWjuvyzd9/u9ujl9AWa3q1XFLrdPZetILPOC1P0+1LOCq4kZcsKF5Q==",
+      "sha": "BEN6F4aNjbBdDxM8Xhb/MCSDhYmtvA29c1HUBvn0aNAVXaIJECLy2w5YkcscdklIieZCrcYeG2UzIgWlr4+GeQ==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
           "dependencies": {},
@@ -2950,7 +3020,7 @@
     },
     "System.Security.Cryptography.Hashing/4.0.0-beta-22816": {
       "serviceable": false,
-      "sha": "bB8cT1NwMBuz7tejXLQ3eH81s0pRoaqwUrM1CNCNeEV1OFyUQ/qXJhVx5nXTB8AGMIxGVn9JCXMdZm6CM2RTrA==",
+      "sha": "CQ+k5PCqX3rOYC1gLcFNXWl7VwBPMyZhkQFiukqtSMG/mWKQ8ba9+oF1V+9c5zUerhHMxFhrwymnghQpA/NdhQ==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
           "dependencies": {
@@ -2981,7 +3051,7 @@
     },
     "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-22816": {
       "serviceable": false,
-      "sha": "xjCltKxHteccyq3dUXzJaN1L7BQJnbS0xT2A79ac3xmzxUDiIFQtRjhlexf/LQ8uTXKR7epqkZL3xsHxbj2aZg==",
+      "sha": "2lhNYPFf0ChTgS83OOiGqxkB8ue4e8r28B3F4NDdsQSaknW5RDhhFSxe40bFltiNuIXuNz1QROI1345leHnjxw==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
           "dependencies": {
@@ -3012,7 +3082,7 @@
     },
     "System.Text.Encoding/4.0.10-beta-22816": {
       "serviceable": false,
-      "sha": "QDKTAvat7aDGMWnVkGm6tJvvmc2zSTa/p8M4/OEBBkZKNx4SGkeGEjFUhl7b6AXZ220m4dACygkiAVoB/LqMHw==",
+      "sha": "4Isk8Lg2mkSex8N1ufJfazDo9Z0zTvx7FRh7LYiIqUJJSmPMenMXoFYMtm3tQ+sUWz23qMlIrOvT9BuIBnmRQg==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
           "dependencies": {
@@ -3042,7 +3112,7 @@
     },
     "System.Threading.Tasks/4.0.10-beta-22816": {
       "serviceable": false,
-      "sha": "e7TcoQuIPQ4bvkkCY2ulU8NFvj8XqYxsGpD3fAq1KajAlpx5j327Q13lKxlGPb7ouHQydKHCy5G1ZGuydb0DAA==",
+      "sha": "KhcVrI2JzX1oHigWTbf4F/2uhPSkhjquLPYbBVCLe9HGxLDJk2WLgmTbJk7fIus6xWWnWJmhOp0rHERU9M2SQw==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
           "dependencies": {
