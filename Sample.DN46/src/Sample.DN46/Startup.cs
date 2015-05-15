@@ -68,6 +68,7 @@ namespace Sample.DN46
 
             // Add the console logger.
             loggerfactory.AddConsole();
+            
 
             // Add the following to the request pipeline only in development environment.
             if (env.IsEnvironment("Development"))
@@ -84,6 +85,7 @@ namespace Sample.DN46
 
             // Add static files to the request pipeline.
             app.UseStaticFiles();
+            
 
             // Add MVC to the request pipeline.
             app.UseMvc(routes =>
@@ -95,6 +97,8 @@ namespace Sample.DN46
                 // Uncomment the following line to add a route for porting Web API 2 controllers.
                 // routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
             });
+
+
         }
     }
 }

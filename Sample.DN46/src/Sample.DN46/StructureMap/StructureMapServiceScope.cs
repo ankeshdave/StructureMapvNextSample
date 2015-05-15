@@ -18,6 +18,11 @@ namespace Sample.DN46.StructureMap
             _container = container;
             _childContainer = _container.GetNestedContainer();
             _provider = new StructureMapServiceProvider(_childContainer, true);
+            container.Configure(expression =>
+            {
+                expression.For<IServiceProvider>().Use(_provider);
+
+            });
         }
 
         public IServiceProvider ServiceProvider => _provider;

@@ -10,13 +10,10 @@ namespace Sample.DN46.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IContainer _container;
-        public IServiceProvider ServiceProvider { get; set; }
 
-        public HomeController(IServiceProvider serviceProvider,IContainer container)
+        public HomeController(ITestClass1 testClass1,ITestClass2 testClass2,IServiceProvider serviceProvider)
         {
-            _container = container;
-            ServiceProvider = serviceProvider;
+
         }
 
         public IActionResult Index()
